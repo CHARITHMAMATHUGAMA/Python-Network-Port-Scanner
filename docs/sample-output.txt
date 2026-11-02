@@ -1,0 +1,23 @@
+# Captured from a local test environment on 2026-11-02. Your results WILL differ.
+
+$ python demo.py
+Local-only test server started successfully.
+Detected 127.0.0.1:55059/tcp as OPEN
+Demo reports saved under: ./reports
+
+$ python main.py --ports 80,443,8080 --show-all --json
+======================================================
+       PYTHON NETWORK PORT SCANNER
+======================================================
+Target: 127.0.0.1 (127.0.0.1)
+Scan: TCP connect | Ports: 3 | Timeout: 0.5s
+Authorized use only. Starting scan...
+
+     80/tcp  NOT OPEN   http
+    443/tcp  NOT OPEN   https
+   8080/tcp  OPEN       http-alt
+
+Finished: 1 OPEN / 3 checked in 0.00s
+CSV report: ./reports/scan_results.csv
+JSON report: ./reports/scan_results.json
+Note: 'NOT OPEN' can mean closed, filtered or unreachable.
